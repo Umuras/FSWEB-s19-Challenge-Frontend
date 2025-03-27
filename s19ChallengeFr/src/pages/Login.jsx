@@ -2,6 +2,7 @@ import twitterlogo from "../../public/twittersymbol.png";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export function Login() {
   const {
@@ -17,16 +18,18 @@ export function Login() {
     mode: "all",
   });
 
-  function submitForm(formData) {
+  async function submitForm(formData) {
     try {
-      axios
+      const response = await axios
         .post("http://localhost:3000/workintech/api/v1/auth/login", formData)
         .then((response) => {
           console.log(response);
           console.log("Sisteme giriş başarılı");
+          toast.success("Sisteme giriş başarılı!");
         });
     } catch (error) {
       console.log(error.message);
+      toast.error("Sisteme giriş başarısız!");
     }
   }
 
@@ -46,7 +49,7 @@ export function Login() {
           <input
             type="email"
             placeholder="Email"
-            className="p-2 border border-gray-400 rounded-md"
+            className="p-2 border border-gray-400 bg-gray-200 rounded-md"
             {...register("email", {
               required: "Geçerli email adresi yazmalısınız",
               pattern: {
@@ -73,7 +76,7 @@ export function Login() {
           )}
 
           <button
-            className="p-2  rounded-2xl bg-blue-400 text-white font-bold cursor:pointer disabled:bg-gray-500"
+            className="p-2  rounded-2xl bg-blue-400 text-white font-bold cursor-pointer disabled:bg-gray-500"
             type="submit"
             disabled={!isValid}
           >
