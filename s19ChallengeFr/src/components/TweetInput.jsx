@@ -1,0 +1,30 @@
+export function TweetInput() {
+  return (
+    <>
+      <div className="flex flex-row justify-center w-full">
+        <div className=" py-5 flex items-start">
+          <div className="flex flex-col gap-4 border-2 border-gray-500">
+            <h1 className="font-bold text-2xl text-amber-100">Home</h1>
+            <div className="flex gap-4">
+              <img
+                src="https://picsum.photos/id/2/200/300"
+                alt=""
+                className="rounded-full h-12 w-12"
+              />
+              <input
+                type="text"
+                className="px-50 py-2 rounded-full bg-gray-500"
+                placeholder="What's happening?"
+              />
+            </div>
+            <div className="">
+              <button className="px-16 py-2 text-center rounded-3xl bg-blue-500 text-white font-bold ml-120 mt-2 cursor-pointer">
+                Tweet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export function Login() {
   const {
@@ -18,14 +19,19 @@ export function Login() {
     mode: "all",
   });
 
+  const history = useHistory();
+
   async function submitForm(formData) {
     try {
       const response = await axios
-        .post("http://localhost:3000/workintech/api/v1/auth/login", formData)
+        .post("http://localhost:3000/workintech/api/v1/auth/login", formData, {
+          withCredentials: true,
+        })
         .then((response) => {
           console.log(response);
           console.log("Sisteme giriş başarılı");
           toast.success("Sisteme giriş başarılı!");
+          history.push("/mainpage");
         });
     } catch (error) {
       console.log(error.message);

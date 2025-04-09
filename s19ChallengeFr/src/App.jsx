@@ -6,6 +6,7 @@ import { Login } from "./pages/Login";
 import { Route } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 import { Register } from "./pages/Register";
+import { MainPage } from "./pages/MainPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,10 @@ function App() {
 
           <Route path="/register">
             <Register />
+          </Route>
+
+          <Route path="/mainpage">
+            <MainPage />
           </Route>
         </Switch>
       </div>
