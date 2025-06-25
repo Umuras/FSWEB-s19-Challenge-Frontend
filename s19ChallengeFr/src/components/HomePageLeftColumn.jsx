@@ -1,6 +1,6 @@
 export function HomePageLeftColumn() {
   return (
-    <>
+    <div className="flex flex-col justify-start items-start w-80 h-screen bg-gray-800 text-white">
       <img src="/twittersymbol.png" alt="" className="w-10 h-10 ml-8 mt-8" />
       <div className="flex items-center gap-4 ml-8 mt-8">
         <img src="/home.png" alt="" className="w-10 h-10" />
@@ -35,7 +35,7 @@ export function HomePageLeftColumn() {
         <p className="font-bold">More</p>
       </div>
       <button
-        className="px-16 py-4 text-center rounded-3xl bg-blue-500 text-white font-bold ml-8 mt-8 cursor-pointer"
+        className="px-24 py-4 text-center rounded-3xl bg-blue-500 text-white font-bold ml-8 mt-8 cursor-pointer"
         onClick={() => alert("Merhaba")}
       >
         Tweet
@@ -43,7 +43,7 @@ export function HomePageLeftColumn() {
 
       <div className="flex ml-16">
         <img
-          src="https://picsum.photos/id/2/200/300"
+          src="https://picsum.photos/id/1/200/300"
           alt=""
           className="rounded-full h-12 w-12 p-0 mt-32 mr-4"
         />
@@ -56,6 +56,6 @@ export function HomePageLeftColumn() {
           </label>
         </div>
       </div>
-    </>
+    </div>
   );
 }

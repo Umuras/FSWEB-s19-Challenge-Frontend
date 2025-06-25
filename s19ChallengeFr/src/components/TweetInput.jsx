@@ -1,9 +1,9 @@
 export function TweetInput() {
   return (
     <>
-      <div className="flex flex-row justify-center w-full">
+      <div className="flex flex-row justify-start w-full border-1 border-gray-500 text-white">
         <div className=" py-5 flex items-start">
-          <div className="flex flex-col gap-4 border-2 border-gray-500">
+          <div className="flex flex-col gap-4">
             <h1 className="font-bold text-2xl text-amber-100">Home</h1>
             <div className="flex gap-4">
               <img
