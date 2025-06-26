@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 export function HomePageLeftColumn() {
   return (
     <div className="flex flex-col justify-start items-start w-80 h-screen bg-gray-800 text-white">
       <img src="/twittersymbol.png" alt="" className="w-10 h-10 ml-8 mt-8" />
-      <div className="flex items-center gap-4 ml-8 mt-8">
+      <Link className="flex items-center gap-4 ml-8 mt-8" to="/mainpage">
         <img src="/home.png" alt="" className="w-10 h-10" />
         <p className="font-bold">Home</p>
-      </div>
+      </Link>
       <div className="flex items-center gap-4 ml-8 mt-8">
         <img src="/explore.png" alt="" className="w-10 h-10" />
         <p className="font-bold">Explore</p>
@@ -26,10 +28,13 @@ export function HomePageLeftColumn() {
         <img src="/lists.png" alt="" className="w-10 h-10" />
         <p className="font-bold">Lists</p>
       </div>
-      <div className="flex items-center gap-4 ml-8 mt-8">
+      <Link
+        className="flex items-center gap-4 ml-8 mt-8 cursor-pointer"
+        to="/profile"
+      >
         <img src="/profile.png" alt="" className="w-10 h-10" />
         <p className="font-bold">Profile</p>
-      </div>
+      </Link>
       <div className="flex items-center gap-4 ml-8 mt-8">
         <img src="/more.png" alt="" className="w-10 h-10" />
         <p className="font-bold">More</p>
