@@ -29,7 +29,7 @@ export function Login() {
         })
         .then((response) => {
           console.log(response);
-          console.log("Sisteme giriş başarılı");
+          localStorage.setItem("token", response.data);
           toast.success("Sisteme giriş başarılı!");
           history.push("/mainpage");
         });

@@ -8,6 +8,7 @@ import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 import { Register } from "./pages/Register";
 import { MainPage } from "./pages/MainPage";
 import { ProfilePage } from "./pages/ProfilePage";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,11 +30,15 @@ function App() {
           </Route>
 
           <Route path="/mainpage">
-            <MainPage />
+            <ProtectedRoute>
+              <MainPage />
+            </ProtectedRoute>
           </Route>
 
           <Route path="/profile">
-            <ProfilePage />
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
           </Route>
         </Switch>
       </div>

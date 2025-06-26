@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export function HomePageLeftColumn() {
+  const history = useHistory();
+
   return (
     <div className="flex flex-col justify-start items-start w-80 h-screen bg-gray-800 text-white">
       <img src="/twittersymbol.png" alt="" className="w-10 h-10 ml-8 mt-8" />
@@ -56,7 +58,14 @@ export function HomePageLeftColumn() {
           <label htmlFor="" className="mt-32 font-bold">
             auk@test.com
           </label>
-          <label htmlFor="" className=" font-bold text-gray-500 cursor-pointer">
+          <label
+            htmlFor=""
+            className=" font-bold text-gray-500 cursor-pointer"
+            onClick={() => {
+              localStorage.removeItem("token");
+              history.push("/login");
+            }}
+          >
             Log out
           </label>
         </div>
