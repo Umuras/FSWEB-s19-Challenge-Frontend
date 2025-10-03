@@ -36,16 +36,16 @@ export function Register() {
   }
 
   return (
-    <section className="bg-cyan-950 h-screen w-screen flex flex-col justify-center items-center gap-4">
+    <section className="bg-gray-800 h-screen w-screen flex flex-col justify-center items-center gap-4">
       <img src={twitterlogo} className="w-20 h-20" />
 
-      <h1 className="text-4xl text-white">
+      <h1 className="text-4xl text-black !font-bold">
         Welcome to twitter registration page
       </h1>
 
       <form className="flex flex-col gap-4" onSubmit={handleSubmit(submitForm)}>
         <input
-          className="p-2 rounded-md bg-gray-200 font-bold"
+          className="p-2 rounded-md bg-gray-200 font-semibold"
           type="text"
           placeholder="FirstName"
           {...register("firstName", {
@@ -58,7 +58,7 @@ export function Register() {
         )}
 
         <input
-          className="p-2 rounded-md bg-gray-200 font-bold"
+          className="p-2 rounded-md bg-gray-200 font-semibold"
           type="text"
           placeholder="LastName"
           {...register("lastName", {
@@ -71,7 +71,7 @@ export function Register() {
         )}
 
         <input
-          className="p-2 rounded-md bg-gray-200 font-bold"
+          className="p-2 rounded-md bg-gray-200 font-semibold"
           type="email"
           placeholder="Email"
           {...register("email", {
@@ -88,9 +88,9 @@ export function Register() {
         )}
 
         <input
-          className="p-2 rounded-md bg-gray-200 font-bold"
+          className="p-2 rounded-md bg-gray-200 font-semibold"
           type="password"
-          placeholder="password"
+          placeholder="Password"
           {...register("password", {
             required: "Şifre girmelisin",
             minLength: { value: 3, message: "En az 3 karakter olmalı" },

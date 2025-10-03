@@ -1,4 +1,4 @@
-export function TweetInput() {
+export function TweetInput({ user }) {
   return (
     <>
       <div className="flex flex-row justify-start w-full border-1 border-gray-500 text-white">
@@ -7,7 +7,7 @@ export function TweetInput() {
             <h1 className="font-bold text-2xl text-amber-100">Home</h1>
             <div className="flex gap-4">
               <img
-                src="https://picsum.photos/id/2/200/300"
+                src={`https://picsum.photos/id/${user.userId}/200/300`}
                 alt=""
                 className="rounded-full h-12 w-12"
               />

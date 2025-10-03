@@ -11,18 +11,18 @@ import { ProfilePage } from "./pages/ProfilePage";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState({});
 
   return (
     <>
       <div>
         <Switch>
           <Route exact path="/">
-            <Login />
+            <Login user={user} setUser={setUser} />
           </Route>
 
           <Route path="/login">
-            <Login />
+            <Login user={user} setUser={setUser} />
           </Route>
 
           <Route path="/register">
@@ -31,13 +31,13 @@ function App() {
 
           <Route path="/mainpage">
             <ProtectedRoute>
-              <MainPage />
+              <MainPage user={user} />
             </ProtectedRoute>
           </Route>
 
           <Route path="/profile">
             <ProtectedRoute>
-              <ProfilePage />
+              <ProfilePage user={user} />
             </ProtectedRoute>
           </Route>
         </Switch>

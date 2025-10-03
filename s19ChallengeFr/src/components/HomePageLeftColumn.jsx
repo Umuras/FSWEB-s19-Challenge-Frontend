@@ -1,6 +1,6 @@
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-export function HomePageLeftColumn() {
+export function HomePageLeftColumn({ user }) {
   const history = useHistory();
 
   return (
@@ -50,13 +50,13 @@ export function HomePageLeftColumn() {
 
       <div className="flex ml-16">
         <img
-          src="https://picsum.photos/id/1/200/300"
+          src={`https://picsum.photos/id/${user.userId}/200/300`}
           alt=""
           className="rounded-full h-12 w-12 p-0 mt-32 mr-4"
         />
         <div className="flex flex-col">
           <label htmlFor="" className="mt-32 font-bold">
-            auk@test.com
+            {user.userName}
           </label>
           <label
             htmlFor=""

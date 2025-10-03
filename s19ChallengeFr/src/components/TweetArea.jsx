@@ -1,14 +1,6 @@
 export function TweetArea(props) {
-  const { tweets, commentQuantity } = props;
+  const { tweets } = props;
   console.log(tweets);
-  let commentNew = {};
-  let sumCommentCount;
-
-  const test = () => {
-    for (let i = 0; i < 5; i++) {
-      console.log("MERHABA");
-    }
-  };
 
   return (
     <>
@@ -32,7 +24,7 @@ export function TweetArea(props) {
                   <div className="flex justify-between items-center w-[605px]">
                     <label className="text-white font-bold" htmlFor="">
                       {tweet.userFirstName + " " + tweet.userLastName} @
-                      {tweet.email} - 15 gün önce
+                      {tweet.email}
                     </label>
                     <img src="/more.png" alt="" className="w-10 h-10" />
                   </div>
@@ -44,21 +36,21 @@ export function TweetArea(props) {
                     <div className="flex gap-2 items-center cursor-pointer">
                       <img src="/commenticon.png" alt="" className="w-5 h-5" />
                       <label htmlFor="" className="font-bold text-white">
-                        60
+                        {tweet.commentCount}
                       </label>
                     </div>
 
                     <div className="flex gap-2 cursor-pointer items-center">
                       <img src="/retweeticon.png" alt="" className="w-7 h-7" />
                       <label htmlFor="" className="font-bold text-white">
-                        10
+                        {tweet.retweetCount}
                       </label>
                     </div>
 
                     <div className="flex gap-2 items-center cursor-pointer">
                       <img src="/likeicon.png" alt="" className="w-5 h-5" />
                       <label htmlFor="" className="font-bold text-white">
-                        10
+                        {tweet.likeCount}
                       </label>
                     </div>
                   </div>

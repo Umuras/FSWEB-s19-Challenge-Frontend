@@ -1,11 +1,11 @@
 import twitterlogo from "../../public/twittersymbol.png";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-export function Login() {
+export function Login({ user, setUser }) {
   const {
     register,
     handleSubmit,
@@ -29,7 +29,8 @@ export function Login() {
         })
         .then((response) => {
           console.log(response);
-          localStorage.setItem("token", response.data);
+          localStorage.setItem("token", response.data.token);
+          setUser(response.data.userResponse);
           toast.success("Sisteme giriş başarılı!");
           history.push("/mainpage");
         });
@@ -40,7 +41,7 @@ export function Login() {
   }
 
   return (
-    <section className="bg-cyan-950 w-screen h-screen flex justify-center items-center">
+    <section className="bg-gray-800 w-screen h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center gap-6">
         <img
           src="/twittersymbol.png"
@@ -55,7 +56,7 @@ export function Login() {
           <input
             type="email"
             placeholder="Email"
-            className="p-2 border border-gray-400 bg-gray-200 rounded-md"
+            className="p-2 border border-gray-400 bg-gray-200 rounded-md font-semibold"
             {...register("email", {
               required: "Geçerli email adresi yazmalısınız",
               pattern: {
@@ -70,8 +71,8 @@ export function Login() {
           )}
           <input
             type="password"
-            placeholder="password"
-            className="p-2 border border-gray-400 bg-gray-200 rounded-md"
+            placeholder="Password"
+            className="p-2 border border-gray-400 bg-gray-200 rounded-md font-semibold"
             {...register("password", {
               required: "Şifre girmelisin",
               minLength: { value: 3, message: "En az 3 karakter olmalı" },

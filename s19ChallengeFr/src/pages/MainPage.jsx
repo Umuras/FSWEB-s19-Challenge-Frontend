@@ -5,7 +5,7 @@ import { TweetInput } from "../components/TweetInput";
 import { TweetArea } from "../components/TweetArea";
 import { HomePageRightColumn } from "../components/HomePageRightColumn";
 
-export function MainPage() {
+export function MainPage({ user }) {
   const [tweets, setTweets] = useState([]);
   const [commentQuantity, setCommentQuantity] = useState([]);
 
@@ -20,7 +20,7 @@ export function MainPage() {
       });
 
     axios
-      .get("http://localhost:3000/workintech/api/v1/comment/quantity", {
+      .get("http://localhost:3000/workintech/api/v1/comment/quantity/1", {
         withCredentials: true,
       })
       .then((response) => {
@@ -28,17 +28,16 @@ export function MainPage() {
         setCommentQuantity(response.data);
       });
   }, []);
-  function getTweets() {}
 
   return (
     // Sayfanın yüksekliği en az ekran kadar olur ama içerik fazlaysa uzar. min-h-screen ile
     <section className="bg-gray-800 min-h-screen">
       <div className="flex ">
         <div className="flex flex-col justify-start items-start ml-60">
-          <HomePageLeftColumn />
+          <HomePageLeftColumn user={user} />
         </div>
         <div className="flex flex-col">
-          <TweetInput />
+          <TweetInput user={user} />
           <TweetArea tweets={tweets} commentQuantity={commentQuantity} />
         </div>
         <div className="flex flex-col justify-start items-start ml-8 w-[580px]">
