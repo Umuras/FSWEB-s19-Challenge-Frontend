@@ -4,7 +4,7 @@ export function HomePageLeftColumn({ user }) {
   const history = useHistory();
 
   return (
-    <div className="flex flex-col justify-start items-start w-80 h-screen bg-gray-800 text-white">
+    <div className="flex flex-col justify-start items-start w-90 h-screen bg-gray-800 text-white">
       <img src="/twittersymbol.png" alt="" className="w-10 h-10 ml-8 mt-8" />
       <Link className="flex items-center gap-4 ml-8 mt-8" to="/mainpage">
         <img src="/home.png" alt="" className="w-10 h-10" />
@@ -48,7 +48,7 @@ export function HomePageLeftColumn({ user }) {
         Tweet
       </button>
 
-      <div className="flex ml-16">
+      <div className="flex ml-8">
         <img
           src={`https://picsum.photos/id/${user.userId}/200/300`}
           alt=""
@@ -68,6 +68,9 @@ export function HomePageLeftColumn({ user }) {
           >
             Log out
           </label>
+        </div>
+        <div className="flex mt-32 ml-8 items-center">
+          <img src="/more.png" className="w-8 h-8" alt="" />
         </div>
       </div>
     </div>
