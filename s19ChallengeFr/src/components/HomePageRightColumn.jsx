@@ -1,10 +1,10 @@
 export function HomePageRightColumn() {
   return (
-    <div className="flex flex-col justify-start items-start bg-gray-800 text-white">
+    <div className="flex flex-col justify-start items-start bg-[#17202A] text-white">
       <div className="relative">
         <input
           type="text"
-          className="w-[576px] h-[39px] rounded-2xl bg-gray-500 mt-6 text-xl pl-14 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-[576px] h-[39px] rounded-2xl bg-[#283340] mt-6 text-xl pl-14 focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Search Twitter"
         />
         <img
@@ -14,10 +14,10 @@ export function HomePageRightColumn() {
         />
       </div>
 
-      <div className="flex flex-col justify-start items-start mt-6 w-full border-2 border-gray-600 rounded-2xl p-2 bg-[#1e2830]">
+      <div className="flex flex-col justify-start items-start mt-6 w-full border-gray-600 rounded-2xl p-2 bg-[#1e2830]">
         <div className="flex items-start justify-start w-full py-4 border-b-gray-600 border-b-2 mb-4">
-          <label className="font-bold text-white text-4xl text-center">
-            Trends for you
+          <label className="font-bold text-white text-xl text-center">
+            What's happening
           </label>
         </div>
 

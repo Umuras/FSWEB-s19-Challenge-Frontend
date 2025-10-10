@@ -3,7 +3,7 @@ import { TweetArea } from "./TweetArea";
 
 export function ProfilePageHeader({ user, tweets }) {
   return (
-    <div className="flex flex-col justify-start items-start w-[100%] border-1 border-gray-500">
+    <div className="flex flex-col justify-start items-start border-1 border-gray-500 w-[706px]">
       <div className="flex items-center justify-start px-2 gap-8 mt-2">
         <Link to="/mainpage">
           <img src="/backarrow.png" alt="" className="w-6" />
