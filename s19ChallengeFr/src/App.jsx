@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -9,10 +9,27 @@ import { Register } from "./pages/Register";
 import { MainPage } from "./pages/MainPage";
 import { ProfilePage } from "./pages/ProfilePage";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import axios from "axios";
 
 function App() {
   const [user, setUser] = useState({});
 
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    useEffect(() => {
+      axios
+        .get("http://localhost:3000/workintech/api/v1/auth/me", {
+          withCredentials: true, //Bunun sayesinde çerezlerin backende gönderilip oturum doğrulaması yaptırıyoruz.
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          setUser(response.data);
+        });
+    }, []);
+  }
   return (
     <>
       <div>

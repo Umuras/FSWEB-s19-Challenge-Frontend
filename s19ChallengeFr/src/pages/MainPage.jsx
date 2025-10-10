@@ -32,15 +32,15 @@ export function MainPage({ user }) {
   return (
     // Sayfanın yüksekliği en az ekran kadar olur ama içerik fazlaysa uzar. min-h-screen ile
     <section className="bg-gray-800 min-h-screen">
-      <div className="flex ">
-        <div className="flex flex-col justify-start items-start ml-60">
+      <div className="flex max-w-[1440px]">
+        <div className="flex flex-col justify-start items-start ml-[88px]">
           <HomePageLeftColumn user={user} />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center mr-16">
           <TweetInput user={user} />
           <TweetArea tweets={tweets} commentQuantity={commentQuantity} />
         </div>
-        <div className="flex flex-col justify-start items-start ml-8 w-[580px]">
+        <div className="flex flex-col justify-start items-start ml-8 mr-24">
           <HomePageRightColumn />
         </div>
       </div>

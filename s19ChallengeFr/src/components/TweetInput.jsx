@@ -1,7 +1,7 @@
 export function TweetInput({ user }) {
   return (
     <>
-      <div className="flex flex-row justify-start w-full border-1 border-gray-500 text-white">
+      <div className="flex flex-row justify-start w-full border-1 border-gray-500 text-white px-4">
         <div className=" py-5 flex items-start">
           <div className="flex flex-col gap-4">
             <h1 className="font-bold text-2xl text-amber-100">Home</h1>

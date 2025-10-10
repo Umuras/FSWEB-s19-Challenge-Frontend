@@ -7,7 +7,7 @@ export function TweetArea(props) {
       {tweets.map((tweet) => {
         return (
           <div
-            className="flex flex-col border-1 border-gray-500"
+            className="flex flex-col border-1 border-gray-500 px-4"
             key={tweet.id}
           >
             <div className="flex items-center mt-10 justify-between">
