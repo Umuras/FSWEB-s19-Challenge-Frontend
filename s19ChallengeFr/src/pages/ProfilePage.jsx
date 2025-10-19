@@ -19,7 +19,6 @@ export function ProfilePage({ user }) {
         },
       })
       .then((response) => {
-        console.log(response);
         setTweets(response.data);
       });
 
@@ -28,7 +27,6 @@ export function ProfilePage({ user }) {
         withCredentials: true,
       })
       .then((response) => {
-        console.log(response);
         setCommentQuantity(response.data);
       });
   }, []);

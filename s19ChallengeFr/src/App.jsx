@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -16,8 +16,8 @@ function App() {
 
   const token = localStorage.getItem("token");
 
-  if (token) {
-    useEffect(() => {
+  function getUserData() {
+    if (token && Object.entries(user).length === 0) {
       axios
         .get("http://localhost:3000/workintech/api/v1/auth/me", {
           withCredentials: true, //Bunun sayesinde çerezlerin backende gönderilip oturum doğrulaması yaptırıyoruz.
@@ -28,8 +28,12 @@ function App() {
         .then((response) => {
           setUser(response.data);
         });
-    }, []);
+    }
   }
+  useEffect(() => {
+    getUserData();
+  }, []);
+
   return (
     <>
       <div>

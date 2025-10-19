@@ -3,7 +3,7 @@ import { TweetArea } from "./TweetArea";
 
 export function ProfilePageHeader({ user, tweets }) {
   return (
-    <div className="flex flex-col justify-start items-start border-1 border-gray-500 w-[706px]">
+    <div className="flex flex-col justify-start items-start border-1 border-[#3A444C] w-[706px]">
       <div className="flex items-center justify-start px-2 gap-8 mt-2">
         <Link to="/mainpage">
           <img src="/backarrow.png" alt="" className="w-6" />
@@ -42,7 +42,7 @@ export function ProfilePageHeader({ user, tweets }) {
           {user.userFullName}
         </label>
         <label className="text-gray-500 text-lg font-bold w-[92%] !m-0 !p-0">
-          @+{user.userName}
+          @+{user.twitterUserName}
         </label>
         <label className="text-white font-semibold text-lg" htmlFor="">
           Full-Stack Developer

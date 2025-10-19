@@ -13,6 +13,7 @@ export function Register() {
     defaultValues: {
       firstName: "",
       lastName: "",
+      twitterUserName: "",
       email: "",
       password: "",
       description: "registrationPage",
@@ -31,6 +32,7 @@ export function Register() {
         });
     } catch (error) {
       toast.error("Kayıt başarısız, zaten böyle bir kullanıcı var!");
+      console.log(formData);
       console.log(error.message);
     }
   }
@@ -68,6 +70,21 @@ export function Register() {
         />
         {errors.lastName && (
           <p className="text-red-600 font-bold">{errors.lastName.message}</p>
+        )}
+
+        <input
+          className="p-2 rounded-md bg-gray-200 font-semibold"
+          type="text"
+          placeholder="Username"
+          {...register("twitterUserName", {
+            required: "Kullanıcı adı girmelisin",
+            minLength: { value: 3, message: "En az 3 karakter olmalı" },
+          })}
+        />
+        {errors.twitterUserName && (
+          <p className="text-red-600 font-bold">
+            {errors.twitterUserName.message}
+          </p>
         )}
 
         <input

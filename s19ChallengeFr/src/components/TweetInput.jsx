@@ -1,14 +1,14 @@
 export function TweetInput({ user }) {
   return (
     <>
-      <div className="flex flex-row justify-start w-full border-1 border-gray-500 text-white">
-        <div className="py-4 flex items-start">
+      <div className="flex flex-row justify-start w-full border-1 border-[#3A444C] text-white">
+        <div className="py-[15px] flex items-start">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center px-4">
               <h1 className="font-bold text-xl text-white">Home</h1>
               <img src="/star.png" alt="" />
             </div>
-            <div className="border-1 border-gray-500 w-[44rem]"></div>
+            <div className="border-1 border-[#3A444C] w-[44rem]"></div>
 
             <div className="flex gap-4 px-4">
               <img

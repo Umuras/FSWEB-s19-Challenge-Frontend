@@ -56,7 +56,7 @@ export function HomePageLeftColumn({ user }) {
         />
         <div className="flex flex-col">
           <label htmlFor="" className="mt-32 font-bold">
-            {user.userName}
+            {user.twitterUserName}
           </label>
           <label
             htmlFor=""

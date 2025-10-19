@@ -15,7 +15,6 @@ export function MainPage({ user }) {
         withCredentials: true, //Bunun sayesinde çerezlerin backende gönderilip oturum doğrulaması yaptırıyoruz.
       })
       .then((response) => {
-        console.log(response);
         setTweets(response.data);
       });
 
@@ -24,7 +23,6 @@ export function MainPage({ user }) {
         withCredentials: true,
       })
       .then((response) => {
-        console.log(response);
         setCommentQuantity(response.data);
       });
   }, []);
