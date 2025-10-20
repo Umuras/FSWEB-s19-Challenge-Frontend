@@ -3,7 +3,7 @@ import { TweetArea } from "./TweetArea";
 
 export function ProfilePageHeader({ user, tweets }) {
   return (
-    <div className="flex flex-col justify-start items-start border-1 border-[#3A444C] w-[706px]">
+    <div className="flex flex-col justify-start items-start border-1 border-[#3A444C]">
       <div className="flex items-center justify-start px-2 gap-8 mt-2">
         <Link to="/mainpage">
           <img src="/backarrow.png" alt="" className="w-6" />
@@ -20,7 +20,7 @@ export function ProfilePageHeader({ user, tweets }) {
       <div className="flex justify-between">
         <div className="flex flex-col relative">
           <img
-            src={`https://picsum.photos/id/${user.userId + 10}/599/200`}
+            src={`https://picsum.photos/id/${user.userId + 10}/606/200`}
             alt=""
             className="w-[100%] h-[247px] m-0 p-0"
           />

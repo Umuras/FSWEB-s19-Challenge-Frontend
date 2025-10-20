@@ -1,20 +1,20 @@
 export function HomePageRightColumn() {
   return (
-    <div className="flex flex-col justify-start items-start bg-[#17202A] text-white">
+    <div className="flex flex-col bg-[#17202A] text-white w-[26rem] mt-2.5">
       <div className="relative">
         <input
           type="text"
-          className="w-[576px] h-[39px] rounded-2xl bg-[#283340] mt-6 text-xl pl-14 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full h-[39px] rounded-2xl bg-[#283340] text-xl pl-14 focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Search Twitter"
         />
         <img
           src="/searchicon.png"
           alt=""
-          className="w-8 h-8 absolute left-4 top-11 -translate-y-1/2 pointer-events-none"
+          className="w-8 h-8 absolute left-4 top-[1.2rem] -translate-y-1/2 pointer-events-none"
         />
       </div>
 
-      <div className="flex flex-col justify-start items-start mt-6 w-full border-gray-600 rounded-2xl p-2 bg-[#1e2830]">
+      <div className="flex flex-col justify-start items-start mt-6 border-gray-600 rounded-2xl p-2 bg-[#1e2830]">
         <div className="flex items-start justify-start w-full py-4 border-b-gray-600 border-b-2 mb-4">
           <label className="font-bold text-white text-xl text-center">
             What's happening
@@ -23,10 +23,10 @@ export function HomePageRightColumn() {
 
         <div className="flex">
           <div className="flex flex-col justify-start items-start">
-            <label htmlFor="" className="text-gray-400 text-2xl mb-1">
+            <label htmlFor="" className="text-gray-400 text-xl mb-1">
               COVID 19 Last night
             </label>
-            <p className="text-white text-2xl font-bold w-[92%]">
+            <p className="text-white text-[1rem] font-bold w-[90%]">
               England's Chief Medical Officer says the UK is at the most
               dangerous time of the pandemic
             </p>
@@ -34,17 +34,17 @@ export function HomePageRightColumn() {
               Trending with <span className="text-blue-300">#covid19</span>
             </label>
           </div>
-          <img src="/Media.png" alt="" className="w-[40%] h-[80%] mr-3.5" />
+          <img src="/Media.png" alt="" className="w-[7rem] h-[7rem] mr-3.5" />
         </div>
 
         <div className="border-b-2 border-gray-500 w-full mt-6"></div>
 
         <div className="flex mt-8">
           <div className="flex flex-col justify-start items-start">
-            <label htmlFor="" className="text-gray-400 text-2xl mb-1">
+            <label htmlFor="" className="text-gray-400 text-xl mb-1">
               US news 4h ago
             </label>
-            <p className="text-white text-2xl font-bold w-[90%]">
+            <p className="text-white text-[1rem] font-bold w-[90%]">
               Parler may go offline following suspensions by Amazon, Apple and
               Google
             </p>
@@ -52,17 +52,17 @@ export function HomePageRightColumn() {
               Trending with <span className="text-blue-300">#trump</span>
             </label>
           </div>
-          <img src="/phone.png" alt="" className="w-[40%] h-[80%] mr-3.5" />
+          <img src="/phone.png" alt="" className="w-[7rem] h-[7rem] mr-3.5" />
         </div>
 
         <div className="border-b-2 border-gray-500 w-full mt-6"></div>
 
         <div className="flex mt-8">
           <div className="flex flex-col justify-start items-start">
-            <label htmlFor="" className="text-gray-400 text-2xl mb-1">
+            <label htmlFor="" className="text-gray-400 text-xl mb-1">
               India 1h ago
             </label>
-            <p className="text-white text-2xl font-bold w-[90%]">
+            <p className="text-white text-[1rem] font-bold w-[90%]">
               India vs Australia: India hold on to earn a draw on Day 5 in
               Sydney Test
             </p>
@@ -73,7 +73,7 @@ export function HomePageRightColumn() {
           <img
             src="/place.png"
             alt=""
-            className="w-[40%] h-[80%] mr-3.5 rounded-2xl"
+            className="w-[7rem] h-[7rem] mr-3.5 rounded-2xl"
           />
         </div>
 

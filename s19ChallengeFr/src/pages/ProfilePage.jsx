@@ -33,15 +33,15 @@ export function ProfilePage({ user }) {
 
   return (
     <section className="bg-[#17202A] min-h-screen">
-      <div className="flex max-w-[1440px]">
-        <div className="flex flex-col justify-start items-start ml-[5.5rem]">
+      <div className="flex justify-center">
+        <div className="flex flex-col justify-start items-start">
           <HomePageLeftColumn user={user} />
         </div>
         <div className="flex flex-col">
           <ProfilePageHeader user={user} tweets={tweets} />
           <TweetArea tweets={tweets} commentQuantity={commentQuantity} />
         </div>
-        <div className="flex flex-col justify-start items-start ml-8 mr-24">
+        <div className="flex flex-col ml-8 mr-10">
           <HomePageRightColumn />
         </div>
       </div>
