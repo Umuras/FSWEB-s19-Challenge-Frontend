@@ -48,7 +48,7 @@ export function Login({ user, setUser }) {
           alt="Twitter Logo"
           className="w-20 h-20"
         />
-        <h1 className="text-3xl font-bold">Log in to Twitter</h1>
+        <h1 className="text-3xl text-white font-bold">Log in to Twitter</h1>
         <form
           className="flex flex-col gap-4"
           onSubmit={handleSubmit(submitForm)}

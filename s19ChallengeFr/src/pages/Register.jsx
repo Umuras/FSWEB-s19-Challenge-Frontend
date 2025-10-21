@@ -41,7 +41,7 @@ export function Register() {
     <section className="bg-gray-800 h-screen w-screen flex flex-col justify-center items-center gap-4">
       <img src={twitterlogo} className="w-20 h-20" />
 
-      <h1 className="text-4xl text-black !font-bold">
+      <h1 className="text-4xl text-white !font-bold">
         Welcome to twitter registration page
       </h1>
 
